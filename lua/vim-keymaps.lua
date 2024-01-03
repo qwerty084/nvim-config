@@ -12,4 +12,12 @@ vim.o.clipboard = "unnamedplus"
 
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
-vim.opt.updatetime = 50
+
+vim.o.updatetime = 250
+vim.o.timeoutlen = 300
+
+vim.o.undofile = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
+vim.o.completeopt = 'menuone,noselect'
