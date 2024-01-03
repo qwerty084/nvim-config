@@ -21,3 +21,4 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 vim.o.completeopt = 'menuone,noselect'
+vim.g.netrw_banner = 0
