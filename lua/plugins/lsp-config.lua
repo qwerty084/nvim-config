@@ -10,7 +10,6 @@ return {
         config = function()
             local capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
-
             local lspconfig = require("lspconfig")
             lspconfig.lua_ls.setup({
                 capabilities = capabilities
@@ -21,9 +20,13 @@ return {
             lspconfig.gopls.setup({
                 capabilities = capabilities
             })
+            lspconfig.intelephense.setup({
+                capabilities = capabilities
+            })
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
             vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+            vim.keymap.set("n", "<leader>F", vim.lsp.buf.format, {})
         end
     }
 }
